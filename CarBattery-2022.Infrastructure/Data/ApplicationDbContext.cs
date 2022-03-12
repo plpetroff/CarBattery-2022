@@ -1,4 +1,4 @@
-﻿namespace CarBattery_2022.Data
+﻿namespace CarBattery_2022.Infrastructure.Data
 {
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;

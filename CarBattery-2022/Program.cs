@@ -1,4 +1,5 @@
-using CarBattery_2022.Data;
+
+using CarBattery_2022.Infrastructure.Data;
 using CarBattery_2022.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

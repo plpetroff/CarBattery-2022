@@ -1,4 +1,4 @@
-﻿namespace CarBattery_2022.Data.Migrations
+﻿namespace CarBattery_2022.Infrastructure.Data.Migrations
 {
     using Microsoft.EntityFrameworkCore.Metadata;
     using Microsoft.EntityFrameworkCore.Migrations;
