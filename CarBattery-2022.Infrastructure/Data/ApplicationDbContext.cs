@@ -12,6 +12,11 @@
 
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+
         public DbSet<Battery> Batteries { get; init; }
 
         public DbSet<Brand> Brands { get; init; }

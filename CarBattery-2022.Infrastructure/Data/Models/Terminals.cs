@@ -2,15 +2,20 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using static DataConstants;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
     public class Terminals
     {
+        [Key]
         public int Id { get; set; }
 
+        [StringLength(DescriptionMaxLength)]
         public string Description { get; set; }
-        //public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();
+
+        public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();
     }
 }

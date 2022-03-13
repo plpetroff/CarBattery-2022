@@ -2,13 +2,19 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using static DataConstants;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
     public class BoxType
     {
+        [Key]
         public int Id { get; set; }
+
+        [Required]
+        [StringLength(BoxTypeCodeMaxLength)]
         public string BoxTypeCode { get; set; }
 
         public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();

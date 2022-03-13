@@ -2,14 +2,18 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
     public class Length
     {
+        [Key]
         public int Id { get; set; }
+
         public int ValueInMm { get; set; }
-        //public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();
+
+        public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();
     }
 }

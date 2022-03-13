@@ -10,12 +10,13 @@
 
     public class Brand
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]
         [MaxLength(BrandNameMaxLength)]
         public string BrandName { get; set; }
 
-        //public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();
+        public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();
     }
 }

@@ -9,5 +9,9 @@
     {
         public const int BrandNameMaxLength = 20;
         public const int CategoryNameMaxLength = 20;
+        public const int BatteryCodeValueMaxLength = 10;
+        public const int BoxTypeCodeMaxLength = 10;
+        public const int TechnologyNameMaxLength = 10;
+        public const int DescriptionMaxLength = 50;
     }
 }
