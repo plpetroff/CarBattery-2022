@@ -12,8 +12,9 @@
         [Key]
         public int Id { get; set; }
 
+        [Required]
         public int Value { get; set; }
 
-        public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();
+        public ICollection<Battery> Batteries { get; init; } = new List<Battery>();
     }
 }

@@ -12,20 +12,25 @@
         [Key]
         public int Id { get; set; }
 
+        [Required]
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
 
+        [Required]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
 
+        [Required]
         public int TechnologyId { get; set; }
         public Technology Technology { get; set; }
 
+        [Required]
         public int CapacityId { get; set; }
         public Capacity Capacity { get; set; }
 
         public int AmperageId { get; set; }
         public Amperage Amperage { get; set; }
+
 
         public int TerminalsId { get; set; }
         public Terminals Terminals { get; set; }

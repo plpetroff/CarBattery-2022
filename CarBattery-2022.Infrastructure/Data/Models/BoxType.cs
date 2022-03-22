@@ -17,6 +17,6 @@
         [StringLength(BoxTypeCodeMaxLength)]
         public string BoxTypeCode { get; set; }
 
-        public IEnumerable<Battery> Batteries { get; init; } = new List<Battery>();
+        public ICollection<Battery> Batteries { get; init; } = new List<Battery>();
     }
 }
