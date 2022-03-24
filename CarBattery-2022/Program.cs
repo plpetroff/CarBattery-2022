@@ -1,5 +1,6 @@
 
 using CarBattery_2022.Infrastructure.Data;
+using CarBattery_2022.Infrastructure.Data.Identity;
 using CarBattery_2022.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
         {
             options.SignIn.RequireConfirmedAccount = true;
             options.Password.RequireDigit = false;
