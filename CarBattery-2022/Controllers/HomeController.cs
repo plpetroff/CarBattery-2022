@@ -16,7 +16,7 @@
 
         public IActionResult Index()
         {
-            ViewData[MessageConstant.ErrorMessage] = "Упс, нещо се счупи :( ";
+            ViewData[MessageConstant.ErrorMessage] = "Браво, успяхме да подкараме :) ";
 
             return View();
         }

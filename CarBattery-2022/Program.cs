@@ -30,13 +30,6 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.Password.RequireNonAlphanumeric = false);
-
-//builder.Services.AddDefaultIdentity<IdentityUser>(options =>
-//options.Password.RequireDigit = false);
-
-//builder.Services.AddDefaultIdentity<IdentityUser>(options =>
-//options.Password.RequireLowercase = false);
 
 
 builder.Services.AddControllersWithViews()
