@@ -1,6 +1,7 @@
 
 using CarBattery_2022.Infrastructure.Data;
 using CarBattery_2022.Infrastructure.Data.Identity;
+using CarBattery_2022.Infrastructure.Data.Repositories;
 using CarBattery_2022.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,12 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//    options.UseSqlServer(connectionString));
 
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+//builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
 
@@ -36,7 +37,7 @@ builder.Services.AddControllersWithViews()
         options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
     });
 
-
+builder.Services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
 
 var app = builder.Build();
 
