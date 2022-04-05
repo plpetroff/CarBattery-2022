@@ -1,4 +1,5 @@
 
+using CarBattery_2022.Extensions;
 using CarBattery_2022.Infrastructure.Data;
 using CarBattery_2022.Infrastructure.Data.Identity;
 using CarBattery_2022.Infrastructure.Data.Repositories;
@@ -39,9 +40,11 @@ builder.Services.AddControllersWithViews()
 
 builder.Services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
 
+//builder.Services.AddApplicationServices();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+//Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -63,6 +66,10 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "Area",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
